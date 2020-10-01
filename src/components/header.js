@@ -1,33 +1,57 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Container, Navbar, NavbarBrand, Button, Nav } from "react-bootstrap"
+import Wordmark from "../images/einsteinpy-wordmark.png"
+import "./header.css"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <header>
+    <Container>
+      <Navbar expand="lg" style={{ backgroundColor: "#FFFFFF" }}>
+        <NavbarBrand>
+          <img
+            src={Wordmark}
+            height="50"
+            width="132"
+            alt="Logo of EinsteinPy"
+          />
+        </NavbarBrand>
+        <Nav id="main-menu" className="mr-auto">
+          <Nav.Item>
+            <Nav.Link
+              href="https://docs.einsteinpy.org/en/latest"
+              className="flex-md-fill text-md-center"
+            >
+              Documentation
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="https://riot.im/app/#/room/#einsteinpy:matrix.org">
+              Community
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="https://gke.mybinder.org/v2/gh/einsteinpy/einsteinpy/master?filepath=index.ipynb">
+              Tutorials
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="https://blog.einsteinpy.org/">Blog</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="https://github.com/einsteinpy/einsteinpy">
+              GitHub
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Button type="primary" href="https://www.paypal.me/shreyasbapat">
+              {" "}
+              Donate
+            </Button>
+          </Nav.Item>
+        </Nav>
+      </Navbar>
+    </Container>
   </header>
 )
 

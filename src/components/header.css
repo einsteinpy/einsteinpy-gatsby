@@ -1,0 +1,22 @@
+#main-menu {
+    font-family: "Lato",sans-serif;
+    padding: 0;
+}
+
+#main-menu .nav-item {
+    margin-top: -20px;
+    padding: 16px;
+}
+
+#main-menu .nav-item.active {
+    border-bottom: 2px solid #CA3C32;
+}
+
+.btn.btn-primary {
+    background-color: #C02942;
+    border-color: #C02942;
+}
+
+.nav-item > .nav-link {
+    color: rgba(0,0,0,.5);
+}
