@@ -1,18 +1,29 @@
 #main-menu {
     font-family: "Lato",sans-serif;
+    background-color: #fff !important;
     padding: 0;
 }
 
-#main-menu .nav-item {
+div.navbar-collapse.collapse {
     margin-top: -20px;
+}
+
+div.nav-item {
     padding: 16px;
 }
 
-#main-menu .nav-item.active {
+div.link.nav-item:hover {
+    background-color: #eee;
     border-bottom: 2px solid #CA3C32;
 }
 
+div.donate.nav-item:hover {
+    background-color: #fff;
+    border-bottom: 0;
+}
+
 .btn.btn-primary {
+    filter: brightness(90%);
     background-color: #C02942;
     border-color: #C02942;
 }

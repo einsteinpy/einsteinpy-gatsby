@@ -7,7 +7,7 @@ import "./header.css"
 const Header = ({ siteTitle }) => (
   <header>
     <Container>
-      <Navbar expand="lg" style={{ backgroundColor: "#FFFFFF" }}>
+      <Navbar id="main-menu" expand="lg" style={{ backgroundColor: "#FFFFFF" }}>
         <NavbarBrand>
           <img
             src={Wordmark}
@@ -16,40 +16,41 @@ const Header = ({ siteTitle }) => (
             alt="Logo of EinsteinPy"
           />
         </NavbarBrand>
-        <Nav id="main-menu" className="mr-auto">
-          <Nav.Item>
-            <Nav.Link
-              href="https://docs.einsteinpy.org/en/latest"
-              className="flex-md-fill text-md-center"
-            >
-              Documentation
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="https://riot.im/app/#/room/#einsteinpy:matrix.org">
-              Community
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="https://gke.mybinder.org/v2/gh/einsteinpy/einsteinpy/master?filepath=index.ipynb">
-              Tutorials
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="https://blog.einsteinpy.org/">Blog</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="https://github.com/einsteinpy/einsteinpy">
-              GitHub
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Button type="primary" href="https://www.paypal.me/shreyasbapat">
-              {" "}
-              Donate
-            </Button>
-          </Nav.Item>
-        </Nav>
+        <Navbar.Collapse>
+          <Nav className="mr-auto">
+            <Nav.Item className="link">
+              <Nav.Link
+                href="https://docs.einsteinpy.org/en/latest"
+              >
+                Documentation
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="link">
+              <Nav.Link href="https://riot.im/app/#/room/#einsteinpy:matrix.org">
+                Community
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="link">
+              <Nav.Link href="https://gke.mybinder.org/v2/gh/einsteinpy/einsteinpy/master?filepath=index.ipynb">
+                Tutorials
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="link">
+              <Nav.Link href="https://blog.einsteinpy.org/">Blog</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="link">
+              <Nav.Link href="https://github.com/einsteinpy/einsteinpy">
+                GitHub
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="donate">
+              <Button type="primary" href="https://www.paypal.me/shreyasbapat">
+                {" "}
+                Donate
+              </Button>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </Container>
   </header>
